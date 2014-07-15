@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Thread";
+}
+@section scripts {
+<script type="text/javascript" src="~/Scripts/Forum/Thread.js"></script>
+}
+
+<h2>Thread</h2>
+
+<script id="postRowTemplate" type="text/html">
+    <tr data-post="%ID%">
+        <td>%CreatedBy%</td>
+        <td>%Content%</td>
+        <td>%Created%</td>
+    </tr>
+</script>
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+        <tr>
+            <td width="100">Author</td>
+            <td>Content</td>
+            <td width="150">Posted</td>
+        </tr>
+    </thead>
+    <tbody id="postTableBody">
+    </tbody>
+</table>
+
+<div class="modal-body">
+    <div role="form">
+        <div class="form-group">
+            <label for="content">Content</label>
+            <textarea id="content" class="form-control" rows="3"></textarea>
+        </div>
+
+        <button id="postReplyButton" class="btn btn-primary">Reply</button>
+    </form>
+</div>
+

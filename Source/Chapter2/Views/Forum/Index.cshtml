@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/Forum/Index.js"></script>
+}
+
+<script id="threadRowTemplate" type="text/html">
+    <tr data-thread="%ID%">
+        <td>%Title%</td>
+        <td>%Started%</td>
+        <td>%StartedBy%</td>
+        <td>%LastPost%</td>
+        <td>%LastPostBy%</td>
+        <td>%PostCount%</td>
+    </tr>
+</script>
+
+<h2>All threads</h2>
+
+<button id="newThreadButton" class="btn btn-primary" data-toggle="modal" data-target="#createThreadModal">New thread</button>
+<hr />
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Started</th>
+            <th>Started by</th>
+            <th>Last post</th>
+            <th>Last post by</th>
+            <th>Post count</th>
+        </tr>
+    </thead>
+    <tbody id="threadTableBody">
+    </tbody>
+</table>
+
+
+<div id="createThreadModal" class="modal fade" role="dialog" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">New thread</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input id="title" type="text" class="form-control" placeholder="Enter title">
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Content</label>
+                        <textarea id="content" class="form-control" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button id="saveThreadButton" type="button" data-dismiss="modal" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
