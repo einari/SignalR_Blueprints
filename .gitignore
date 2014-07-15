@@ -25,6 +25,7 @@ packages
 *.ncrunch*
 *.sublime-workspace
 *.nupkg
+*.mdf
 Source/Bifrost.QuickStart/App_Data
 *.cache
 TestResults/*
