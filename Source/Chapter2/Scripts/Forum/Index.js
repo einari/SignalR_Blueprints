@@ -15,8 +15,8 @@
 }
 
 function mapThread(thread) {
-    thread.Started = new Date(thread.Started).format("dd/MM-yyyy hh:mm");
-    thread.LastPost = new Date(thread.LastPost).format("dd/MM-yyyy hh:mm");
+    thread.Started = new Date(thread.Started).toLocaleString();
+    thread.LastPost = new Date(thread.LastPost).toLocaleString();
 }
 
 $(function () {

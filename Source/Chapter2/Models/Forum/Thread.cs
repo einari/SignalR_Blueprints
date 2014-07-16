@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Chapter2.Models.Forum
 {
     public class Thread
@@ -11,7 +12,6 @@ namespace Chapter2.Models.Forum
         public string StartedBy { get; set; }
         public DateTime LastPost { get; set; }
         public string LastPostBy { get; set; }
-
         public int PostCount { get; set; }
     }
 }

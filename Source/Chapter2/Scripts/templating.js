@@ -4,7 +4,7 @@
     var templateString = template.innerHTML;
 
     for (var property in data) {
-        templateString = templateString.replaceAll("%" + property + "%", data[property]);
+        templateString = templateString.split("%"+property+"%").join(data[property]);
     }
 
     return $(templateString)[0];

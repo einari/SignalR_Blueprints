@@ -21,7 +21,7 @@ function addOrReplaceRow(post) {
 }
 
 function mapPost(post) {
-    post.Created = new Date(post.Created).format("dd/MM-yyyy hh:mm");
+    post.Created = new Date(post.Created).toLocaleString();
 }
 
 
