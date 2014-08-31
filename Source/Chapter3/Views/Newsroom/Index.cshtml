@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/Newsroom/Index.js"></script>
+}
+
+
+<h1>The Newsroom</h1>
+<h2>Publish article</h2>
+<form role="form">
+    <div class="form-group">
+        <label for="imageUrl">ImageUrl</label>
+        <input type="text" class="form-control" id="imageUrl" placeholder="Enter image url">
+    </div>
+    <div class="form-group">
+        <label for="headline">Headline</label>
+        <input type="text" class="form-control" id="headline" placeholder="Enter headline">
+    </div>
+    <div class="form-group">
+        <label for="lead">Lead</label>
+        <input type="text" class="form-control" id="lead" placeholder="Enter lead">
+    </div>
+    <div class="form-group">
+        <label for="byline">Byline</label>
+        <input type="text" class="form-control" id="byline" placeholder="Enter byline">
+    </div>
+    <div class="form-group">
+        <label for="body">Body</label>
+        <textarea class="form-control" id="body" placeholder="Enter body" rows="5"></textarea>
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" id="breakingNews"> Breaking news
+        </label>
+    </div>
+    <button id="publishButton" type="button" class="btn btn-default">Publish</button>
+</form>

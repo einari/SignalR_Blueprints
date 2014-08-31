@@ -1,0 +1,13 @@
+﻿@model Chapter3.Models.News.Article
+@{
+    ViewBag.Title = Model.Headline;
+}
+
+<img style="width:400px" src="@Model.ImageUrl" />
+<h2>@Model.Headline</h2>
+<br />
+Written by @Model.Byline
+<br />
+<h4>@Model.Lead</h4>
+<br />
+@Model.Body

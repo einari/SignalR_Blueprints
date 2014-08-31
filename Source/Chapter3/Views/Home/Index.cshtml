@@ -1,0 +1,58 @@
+﻿@model LandingPageModel
+@using Chapter3.Models.News
+@{
+    ViewBag.Title = "RNC";
+}
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/Home/Index.js"></script>
+}
+
+@helper DisplayArticle(Article article)
+{
+    <img src="@article.ImageUrl" style="width:250px;" />
+    <h4>@article.Headline</h4>
+    <p><a href="/Article/Full/@article.ID">Read more...</a></p>
+}
+
+
+<style>
+    .livenews {
+        height: 460px;
+        overflow-y:auto;
+        border: 1px solid #428bca;
+        -webkit-overflow-scrolling: touch;
+    }
+</style>
+
+<script id="liveNewsItemTemplate" type="text/html">
+    <div>
+        <p class="bg-primary">%PublishedDateString%</p>
+        <p>%Headline%</p>
+        <p>%Lead%</p>
+        <p><a href="/Article/Full/%ID%">Read more...</a></p>
+        <hr />
+    </div>
+</script>
+
+
+<div class="col-xs-6">
+    @foreach( var article in Model.TopTwo )
+    {
+        @DisplayArticle(article)
+    }
+</div>
+
+<div class="col-xs-6">
+    <h4>Live news</h4>
+    <div id="livenewsContainer" class="livenews">
+    </div>
+</div>
+&nbsp;
+
+@foreach (var article in Model.AfterTopTwo)
+{
+    <div class="col-xs-6">
+        @DisplayArticle(article)
+    </div>
+}
+
