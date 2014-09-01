@@ -10,16 +10,6 @@ namespace Chapter3.DAL
     {
         public DbSet<Article> Articles { get; set; }
 
-        public void Insert(Article article)
-        {
-            var currentUser = System.Threading.Thread.CurrentPrincipal.Identity.Name;
-            article.PublishedBy = currentUser;
-            article.PublishedDate = DateTime.UtcNow;
-            Articles.Add(article);
-
-            SaveChanges();
-        }
-
         public IEnumerable<Article> GetArticles()
         {
             return Articles.OrderByDescending(a => a.PublishedDate);
@@ -33,7 +23,6 @@ namespace Chapter3.DAL
         {
             return Articles.OrderByDescending(a => a.PublishedDate).Skip(2);
         }
-       
 
         public Article GetByID(int id)
         {
@@ -43,6 +32,16 @@ namespace Chapter3.DAL
         public IEnumerable<Article> GetArticlesContaining(string phrase)
         {
             return Articles.Where(a => a.Headline.Contains(phrase) || a.Body.Contains(phrase));
+        }
+
+        public void Insert(Article article)
+        {
+            var currentUser = System.Threading.Thread.CurrentPrincipal.Identity.Name;
+            article.PublishedBy = currentUser;
+            article.PublishedDate = DateTime.UtcNow;
+            Articles.Add(article);
+
+            SaveChanges();
         }
     }
 }

@@ -181,7 +181,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\News\Article.cs" />
-    <Compile Include="Models\News\LandingPageModel.cs" />
+    <Compile Include="Models\News\LandingPageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

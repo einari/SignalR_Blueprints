@@ -10,7 +10,7 @@ namespace Chapter3.Controllers
         {
             var articleContext = new ArticleContext();
 
-            var viewModel = new LandingPageModel
+            var viewModel = new LandingPageViewModel
             {
                 TopTwo = articleContext.GetTopTwoArticles(),
                 AfterTopTwo = articleContext.GetArticlesAfterTopTwo()

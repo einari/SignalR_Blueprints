@@ -4,7 +4,6 @@
     var leadElement = document.getElementById("lead");
     var bylineElement = document.getElementById("byline");
     var bodyElement = document.getElementById("body");
-    var breakingNews = document.getElementById("breakingNews");
 
     var publishButton = document.getElementById("publishButton");
     publishButton.addEventListener("click", function () {

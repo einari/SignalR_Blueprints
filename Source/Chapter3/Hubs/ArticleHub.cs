@@ -13,16 +13,17 @@ namespace Chapter3.Hubs
             _articleContext = new ArticleContext();
         }
 
+        public IEnumerable<Article> GetArticles()
+        {
+            return _articleContext.GetArticles();
+        }
+
+        [Authorize]
         public void Publish(Article article)
         {
             _articleContext.Insert(article);
 
             Clients.All.published(article);
-        }
-
-        public IEnumerable<Article> GetArticles()
-        {
-            return _articleContext.GetArticles();
         }
     }
 }

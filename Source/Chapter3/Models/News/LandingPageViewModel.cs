@@ -2,7 +2,7 @@
 
 namespace Chapter3.Models.News
 {
-    public class LandingPageModel
+    public class LandingPageViewModel
     {
         public IEnumerable<Article> TopTwo { get; set; }
         public IEnumerable<Article> AfterTopTwo { get; set; }
