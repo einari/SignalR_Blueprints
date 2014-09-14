@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/metro-bootstrap.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="Scripts/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.signalR-2.1.1.js"></script>
+    <script type="text/javascript" src="signalr/hubs"></script>
+    <script type="text/javascript" src="Scripts/knockout-3.2.0.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="googleCharts.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-default navbar-static-top bsnavbar">
+        <div class="container">
+            <div class="navbar-header">
+                <h1>My Dashboard</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail tile tile-green-sea tile-large">
+                    <div data-bind="lineChart: { title: 'Web Requests', width: 300, height: 300, data: requests }"></div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail tile tile-pomegranate tile-large">
+                    <div data-bind="lineChart: { title: 'Failed Web Requests', width: 300, height: 300, data: failedRequests }"></div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+        <footer class="bs-footer" role="contentinfo">
+            <div class="container">
+                The Dashboard
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
