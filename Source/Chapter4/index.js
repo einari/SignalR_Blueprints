@@ -1,11 +1,8 @@
 ﻿$(function () {
     var viewModel = function () {
         var self = this;
-        this.requests = ko.observableArray([]);
-        this.failedRequests = ko.observableArray([]);
-
-        var hub = $.connection.requestStatisticsHub;
-        var initializedCount = 0;
+        this.requests = ko.observableArray();
+        this.failedRequests = ko.observableArray();
 
         function handleEntry(log, key, value) {
             var result = log().forEach(function (entry) {
@@ -19,6 +16,10 @@
                 log.push([key, ko.observable(value)]);
             }
         };
+
+
+        var hub = $.connection.requestStatisticsHub;
+        var initializedCount = 0;
 
         hub.client.requestCountChanged = function (key, value) {
             if (initializedCount < 2) return;
