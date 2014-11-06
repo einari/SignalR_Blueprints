@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Chapter5</RootNamespace>
-    <AssemblyName>Chapter5</AssemblyName>
+    <RootNamespace>Web</RootNamespace>
+    <AssemblyName>Web</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -139,8 +139,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Bifrost.Default.csproj" />
-    <Content Include="Bifrost.Default.csproj.user" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
