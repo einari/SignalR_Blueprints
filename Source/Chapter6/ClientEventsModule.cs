@@ -8,7 +8,6 @@ namespace Web
 {
     public class ClientEventsModule : NinjectModule
     {
-
         public override void Load()
         {
             Bind<AccountBalanceChanged>().ToMethod(c=>AccountBalanceChanged);

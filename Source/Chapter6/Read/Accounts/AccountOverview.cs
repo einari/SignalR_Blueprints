@@ -10,6 +10,5 @@ namespace Web.Read.Accounts
         public Guid Id { get; set; }
         public AccountNumber AccountNumber { get; set; }
         public decimal Balance { get; set; }
-
     }
 }

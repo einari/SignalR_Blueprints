@@ -11,8 +11,8 @@ namespace Web.Domain.Accounts
 
         public void Transfer(AccountNumber from, AccountNumber to, decimal amount)
         {
-            Apply(new Credit(Id) { AccountNumber = from, Amount = amount });
-            Apply(new Debit(Id) { AccountNumber = to, Amount = amount });
+            Apply(new Credited(Id) { AccountNumber = from, Amount = amount });
+            Apply(new Debited(Id) { AccountNumber = to, Amount = amount });
         }
     }
 }

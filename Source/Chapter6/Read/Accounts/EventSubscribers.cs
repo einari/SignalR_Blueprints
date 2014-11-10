@@ -17,7 +17,7 @@ namespace Web.Read.Accounts
             _accountBalanceChanged = accountBalanceChanged;
         }
 
-        public void Process(Credit @event)
+        public void Process(Credited @event)
         {
             var accountOverview = _entityContext.Entities.Where(a => a.AccountNumber == @event.AccountNumber).Single();
             accountOverview.Balance -= @event.Amount;
@@ -26,7 +26,7 @@ namespace Web.Read.Accounts
             _accountBalanceChanged(accountOverview.AccountNumber, accountOverview.Balance);
         }
 
-        public void Process(Debit @event)
+        public void Process(Debited @event)
         {
             var accountOverview = _entityContext.Entities.Where(a => a.AccountNumber == @event.AccountNumber).Single();
             accountOverview.Balance += @event.Amount;
