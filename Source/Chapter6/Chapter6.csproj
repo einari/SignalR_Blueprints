@@ -196,7 +196,6 @@
     <Compile Include="Domain\Accounts\TransferInputValidator.cs" />
     <Compile Include="Events\Accounts\Credited.cs" />
     <Compile Include="Events\Accounts\Debited.cs" />
-    <Compile Include="ExecutionContextPopulator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Read\Accounts\AccountOverview.cs" />
     <Compile Include="Read\Accounts\AccountsOverview.cs" />
