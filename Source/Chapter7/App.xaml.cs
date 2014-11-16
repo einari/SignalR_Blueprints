@@ -20,19 +20,19 @@ namespace Chapter7
     /// </summary>
     public sealed partial class App : Application
     {
-        public static readonly IContainer Container;
+        static readonly IContainer _container;
 
         static App()
         {
-            Container = ContainerContext.Current;
-            Container.Register<IMessenger>(new Messenger());
+            _container = ContainerContext.Current;
+            _container.Register<IMessenger>(new Messenger());
             ViewModelService.TypeFinder = (name) => {
-                var typeDiscoverer = Container.Get<ITypeDiscoverer>();
+                var typeDiscoverer = _container.Get<ITypeDiscoverer>();
                 var types = typeDiscoverer.FindAnyByName(name);
                 if (types.Length > 1) throw new ArgumentException("Ambiguous viewModel name");
                 return types[0];
             };
-            ViewModelService.InstanceCreator = (t) => Container.Get(t);
+            ViewModelService.InstanceCreator = (t) => _container.Get(t);
         }
 
         private TransitionCollection transitions;
@@ -86,7 +86,7 @@ namespace Chapter7
 
             var dispatcher = rootFrame.Dispatcher;
             DispatcherManager.Current = new Bifrost.Execution.Dispatcher(dispatcher);
-            App.Container.Register<Bifrost.Execution.IDispatcher>(DispatcherManager.Current);
+            App._container.Register<Bifrost.Execution.IDispatcher>(DispatcherManager.Current);
 
 
             if (rootFrame.Content == null)
