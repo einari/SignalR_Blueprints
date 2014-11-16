@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Threading.Tasks;
 using Bifrost.Execution;
 using Microsoft.AspNet.SignalR.Client;
 using Microsoft.AspNet.SignalR.Client.Transports;
@@ -49,12 +48,9 @@ namespace Chapter7.Accounts
             return accounts;
         }
 
-        
-
         public void OnAccountBalanceChanged(AccountBalanceChanged callback)
         {
             _accountBalanceChangedCallbacks.Add(callback);
-            
         }
 
 

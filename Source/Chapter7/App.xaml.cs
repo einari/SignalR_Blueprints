@@ -1,14 +1,13 @@
 ﻿using System;
-using Bifrost.Execution;
-using Bifrost.Messaging;
-using Bifrost.ViewModels;
-using Microsoft.AspNet.SignalR.Client;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
+using Bifrost.Execution;
+using Bifrost.Messaging;
+using Bifrost.ViewModels;
 using Yggdrasil;
 
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
@@ -86,7 +85,7 @@ namespace Chapter7
 
             var dispatcher = rootFrame.Dispatcher;
             DispatcherManager.Current = new Bifrost.Execution.Dispatcher(dispatcher);
-            App._container.Register<Bifrost.Execution.IDispatcher>(DispatcherManager.Current);
+            _container.Register<Bifrost.Execution.IDispatcher>(DispatcherManager.Current);
 
 
             if (rootFrame.Content == null)

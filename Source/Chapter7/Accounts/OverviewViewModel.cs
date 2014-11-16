@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Bifrost.Interaction;
 using Bifrost.Messaging;
@@ -34,11 +33,10 @@ namespace Chapter7.Accounts
         public IEnumerable<AccountOverview> Accounts { get; private set; }
 
         public ICommand TransferCommand { get; private set; }
+
         public void Transfer(string accountNumber)
         {
             _messenger.Publish(new TransferMessage { AccountNumber = accountNumber });
-
         }
-
     }
 }

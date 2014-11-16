@@ -27,14 +27,13 @@
     <Grid>
         <Pivot Title="FIRST RESPONSIVE BANK" 
                CommonNavigationTransitionInfo.IsStaggerElement="True"
-               SelectedIndex="{Binding SelectedPageIndex, Mode=TwoWay}"
-               >
+               SelectedIndex="{Binding SelectedPageIndex, Mode=TwoWay}">
 
             <PivotItem
                 Margin="19,14.5,0,0"
                 Header="overview"
                 CommonNavigationTransitionInfo.IsStaggerElement="True">
-                
+
                 <accounts:Overview/>
 
             </PivotItem>
@@ -43,9 +42,9 @@
                 Margin="19,14.5,0,0"
                 Header="transfer"
                 CommonNavigationTransitionInfo.IsStaggerElement="True">
-                
+
                 <accounts:Transfer/>
-                
+
             </PivotItem>
 
         </Pivot>

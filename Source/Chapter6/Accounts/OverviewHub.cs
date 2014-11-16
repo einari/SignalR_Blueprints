@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using Bifrost.Commands;
 using Microsoft.AspNet.SignalR;
+using Bifrost.Commands;
 using Web.Domain.Accounts;
 using Web.Read.Accounts;
 
