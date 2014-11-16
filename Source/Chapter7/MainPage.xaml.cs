@@ -27,6 +27,16 @@ namespace Chapter7
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+
+            this.KeyUp += MainPage_KeyUp;
+        }
+
+        void MainPage_KeyUp(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Enter)
+            {
+                this.Focus(FocusState.Programmatic);
+            }
         }
 
         /// <summary>
