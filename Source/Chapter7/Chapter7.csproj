@@ -86,27 +86,27 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountOverview.cs" />
-    <Compile Include="AccountsOverview.cs" />
+    <Compile Include="Accounts\AccountOverview.cs" />
+    <Compile Include="Accounts\AccountsOverview.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="IAccountsOverview.cs" />
+    <Compile Include="Accounts\IAccountsOverview.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPageViewModel.cs" />
     <Compile Include="NavigateHomeMessage.cs" />
-    <Compile Include="OverviewViewModel.cs" />
-    <Compile Include="Overview.xaml.cs">
+    <Compile Include="Accounts\OverviewViewModel.cs" />
+    <Compile Include="Accounts\Overview.xaml.cs">
       <DependentUpon>Overview.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Transfer.xaml.cs">
+    <Compile Include="Accounts\Transfer.xaml.cs">
       <DependentUpon>Transfer.xaml</DependentUpon>
     </Compile>
     <Compile Include="TransferMessage.cs" />
-    <Compile Include="TransferViewModel.cs" />
+    <Compile Include="Accounts\TransferViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -131,11 +131,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Overview.xaml">
+    <Page Include="Accounts\Overview.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Transfer.xaml">
+    <Page Include="Accounts\Transfer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

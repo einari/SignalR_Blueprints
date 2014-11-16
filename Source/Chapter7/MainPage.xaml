@@ -5,8 +5,12 @@
     xmlns:local="using:Chapter7"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    
+    xmlns:accounts="using:Chapter7.Accounts"
+    
     xmlns:vm="using:Bifrost.ViewModels"
     vm:ViewModelService.ViewModel="MainPageViewModel"
+    
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"    
     >
@@ -31,7 +35,7 @@
                 Header="overview"
                 CommonNavigationTransitionInfo.IsStaggerElement="True">
                 
-                <local:Overview/>
+                <accounts:Overview/>
 
             </PivotItem>
 
@@ -40,7 +44,7 @@
                 Header="transfer"
                 CommonNavigationTransitionInfo.IsStaggerElement="True">
                 
-                <local:Transfer/>
+                <accounts:Transfer/>
                 
             </PivotItem>
 

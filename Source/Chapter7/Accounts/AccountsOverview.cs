@@ -5,7 +5,7 @@ using Bifrost.Execution;
 using Microsoft.AspNet.SignalR.Client;
 using Microsoft.AspNet.SignalR.Client.Transports;
 
-namespace Chapter7
+namespace Chapter7.Accounts
 {
     public class AccountsOverview : IAccountsOverview
     {

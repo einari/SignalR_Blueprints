@@ -1,7 +1,7 @@
 ﻿using System;
 using PropertyChanged;
 
-namespace Chapter7
+namespace Chapter7.Accounts
 {
     [ImplementPropertyChanged]
     public class AccountOverview

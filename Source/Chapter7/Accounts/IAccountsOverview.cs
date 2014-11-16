@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Chapter7
+namespace Chapter7.Accounts
 {
     public delegate void AccountBalanceChanged(string accountNumber, decimal balance);
 

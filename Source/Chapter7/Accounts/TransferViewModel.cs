@@ -3,7 +3,7 @@ using Bifrost.Interaction;
 using Bifrost.Messaging;
 using PropertyChanged;
 
-namespace Chapter7
+namespace Chapter7.Accounts
 {
     [ImplementPropertyChanged]
     public class TransferViewModel
