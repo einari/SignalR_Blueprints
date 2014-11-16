@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter7", "Chapter7.csproj", "{87028379-43A6-4676-AF37-FFF6D64842E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter7", "Chapter7\Chapter7.csproj", "{87028379-43A6-4676-AF37-FFF6D64842E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter6", "..\Chapter6\Chapter6.csproj", "{18F080B3-A212-4534-9E09-90526D6E3FBE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter6", "Chapter6\Chapter6.csproj", "{18F080B3-A212-4534-9E09-90526D6E3FBE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9650FCE8-F145-4D45-9036-3132AC6E5B4B}"
 	ProjectSection(SolutionItems) = preProject
