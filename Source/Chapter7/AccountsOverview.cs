@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using Bifrost.Execution;
 using Microsoft.AspNet.SignalR.Client;
+using Microsoft.AspNet.SignalR.Client.Transports;
 
 namespace Chapter7
 {
@@ -32,7 +33,7 @@ namespace Chapter7
                 });
             });
 
-            hubConnection.Start().Wait();
+            hubConnection.Start(new LongPollingTransport()).Wait();
         }
 
         public IEnumerable<AccountOverview> GetAccountsOverview()
