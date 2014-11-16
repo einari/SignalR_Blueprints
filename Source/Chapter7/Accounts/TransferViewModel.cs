@@ -17,6 +17,8 @@ namespace Chapter7.Accounts
             messenger.SubscribeTo<TransferMessage>(t =>
             {
                 From = t.AccountNumber;
+                To = string.Empty;
+                Amount = "0";
             });
             _accountsOverview = accountsOverview;
 
@@ -35,6 +37,10 @@ namespace Chapter7.Accounts
             _accountsOverview.Transfer(From, To, amount);
 
             _messenger.Publish(new NavigateHomeMessage());
+
+            From = string.Empty;
+            To = string.Empty;
+            Amount = "0";
         }
     }
 }
