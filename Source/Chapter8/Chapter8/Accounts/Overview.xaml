@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Chapter8.Accounts;assembly=Chapter8"
+					   x:Class="Chapter8.Accounts.Overview"
+             Title="Accounts">
+  <ContentPage.BindingContext>
+    <local:OverviewViewModel/>
+  </ContentPage.BindingContext>
+
+
+  <ListView ItemsSource="{Binding Accounts}">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout Orientation="Horizontal" Padding="16,0">
+            <Label Text="{Binding AccountNumber}"                   
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="Center" />
+            <Label Text="{Binding Balance}"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="Center" />
+              
+            <Button Text="Transfer" Command="{Binding TransferCommand}" CommandParameter="{Binding}"/>
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>

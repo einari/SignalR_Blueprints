@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Chapter8.Accounts;assembly=Chapter8"
+					   x:Class="Chapter8.Accounts.Transfer"
+             Title="Transfer"
+             Padding="16,20,16,0">
+  <ContentPage.BindingContext>
+    <local:TransferViewModel/>
+  </ContentPage.BindingContext>
+
+  <StackLayout Orientation="Vertical">
+
+    <Label Text="From"/>
+    <Entry Text="{Binding From, Mode=TwoWay}"/>
+
+    <Label Text="To"/>
+    <Entry Text="{Binding To, Mode=TwoWay}"/>
+
+    <Label Text="Amount"/>
+    <Entry Text="{Binding Amount, Mode=TwoWay}"/>
+
+    <Button Command="{Binding TransferCommand}" Text="Transfer"/>
+
+  </StackLayout>
+
+</ContentPage>
