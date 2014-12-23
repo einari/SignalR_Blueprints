@@ -16,7 +16,8 @@ namespace Chapter10
                 {
                     EnableJSONP = true
                 };
-
+                
+                /*
                 GlobalHost.DependencyResolver.UseSqlServer(
                         "Data Source=(local);"+
                         "Initial Catalog=SignalRChat;"+
@@ -32,6 +33,7 @@ namespace Chapter10
                 GlobalHost.DependencyResolver.UseServiceBus(
                     "your connection string from azure",
                     "signalr");
+                 */
 
                 map.RunSignalR(hubConfiguration);
             });
