@@ -8,14 +8,15 @@ namespace Chapter3.Controllers
     {
         public ActionResult Index()
         {
-            var articleContext = new ArticleContext();
-
-            var viewModel = new LandingPageViewModel
+            using (var articleContext = new ArticleContext())
             {
-                TopTwo = articleContext.GetTopTwoArticles(),
-                AfterTopTwo = articleContext.GetArticlesAfterTopTwo()
-            };
-            return View(viewModel);
+                var viewModel = new LandingPageViewModel
+                {
+                    TopArticles = articleContext.GetTopArticles(),
+                    OtherArticles = articleContext.GetOtherArticles()
+                };
+                return View(viewModel);
+            }
         }
 
         public ActionResult About()

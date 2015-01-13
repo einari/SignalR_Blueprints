@@ -1,17 +1,28 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Chapter3.DAL;
 using Chapter3.Models.News;
 using Microsoft.AspNet.SignalR;
 
 namespace Chapter3.Hubs
 {
-    public class ArticleHub : Hub
+    public class ArticleHub : Hub, IDisposable
     {
         ArticleContext _articleContext;
         public ArticleHub()
         {
             _articleContext = new ArticleContext();
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing) 
+            {
+               _articleContext.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
 
         public IEnumerable<Article> GetArticles()
         {
@@ -25,5 +36,6 @@ namespace Chapter3.Hubs
 
             Clients.All.published(article);
         }
+
     }
 }

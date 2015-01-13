@@ -8,6 +8,8 @@ namespace Chapter3.DAL
 {
     public class ArticleContext : DbContext
     {
+        public const int NumberOfTopArticles = 2;
+
         public DbSet<Article> Articles { get; set; }
 
         public IEnumerable<Article> GetArticles()
@@ -15,16 +17,16 @@ namespace Chapter3.DAL
             return Articles.OrderByDescending(a => a.PublishedDate);
         }
 
-        public IEnumerable<Article> GetTopTwoArticles()
+        public IEnumerable<Article> GetTopArticles()
         {
-            return Articles.OrderByDescending(a => a.PublishedDate).Take(2);
+            return Articles.OrderByDescending(a => a.PublishedDate).Take(NumberOfTopArticles).ToArray();
         }
-        public IEnumerable<Article> GetArticlesAfterTopTwo()
+        public IEnumerable<Article> GetOtherArticles()
         {
-            return Articles.OrderByDescending(a => a.PublishedDate).Skip(2);
+            return Articles.OrderByDescending(a => a.PublishedDate).Skip(NumberOfTopArticles).ToArray();
         }
 
-        public Article GetByID(int id)
+        public Article GetArticle(int id)
         {
             return Articles.Find(id);
         }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Chapter2.DAL;
 using Chapter2.Models.Forum;
@@ -13,6 +14,16 @@ namespace Chapter2.Hubs.Forum
         {
             _forumContext = new ForumContext();
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                _forumContext.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
         
         public IEnumerable<Post> GetForThread(int threadID)
         {

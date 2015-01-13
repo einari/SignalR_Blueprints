@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Chapter2.DAL;
 using Chapter2.Models.Forum;
@@ -6,7 +7,7 @@ using Microsoft.AspNet.SignalR;
 
 namespace Chapter2.Hubs.Forum
 {
-    public class ThreadHub : Hub
+    public class ThreadHub : Hub, IDisposable
     {
         ForumContext _forumContext;
         
@@ -14,6 +15,16 @@ namespace Chapter2.Hubs.Forum
         {
             _forumContext = new ForumContext();
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                _forumContext.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
 
         public void Create(string title, string content)
         {
@@ -40,6 +51,5 @@ namespace Chapter2.Hubs.Forum
             var hubContext = GlobalHost.ConnectionManager.GetHubContext<ThreadHub>();
             hubContext.Clients.All.threadUpdated(thread);
         }
-
     }
 }

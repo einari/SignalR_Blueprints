@@ -8,9 +8,11 @@ namespace Chapter3.Controllers
         // GET: Article
         public ActionResult Full(int id)
         {
-            var articleContext = new ArticleContext();
-            var article = articleContext.GetByID(id);
-            return View(article);
+            using (var articleContext = new ArticleContext())
+            {
+                var article = articleContext.GetArticle(id);
+                return View(article);
+            }
         }
     }
 }
