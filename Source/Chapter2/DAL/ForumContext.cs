@@ -9,6 +9,8 @@ namespace Chapter2.DAL
         public DbSet<Thread> Threads { get; set; }
         public DbSet<Post> Posts { get; set; }
 
+        public ForumContext() : base("DefaultConnection") { }
+
         public Thread InsertThread(string title, string content)
         {
             var currentUser = System.Threading.Thread.CurrentPrincipal.Identity.Name;

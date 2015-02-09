@@ -12,6 +12,8 @@ namespace Chapter3.DAL
 
         public DbSet<Article> Articles { get; set; }
 
+        public ArticleContext() : base("DefaultConnection") { }
+
         public IEnumerable<Article> GetArticles()
         {
             return Articles.OrderByDescending(a => a.PublishedDate);
