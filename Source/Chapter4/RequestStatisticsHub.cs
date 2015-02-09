@@ -21,7 +21,7 @@ namespace Chapter4
 
         static void Register(Dictionary<string, int> log, Action<dynamic, string, int> hubCallback)
         {
-            var now = DateTime.Now.RoundToNearest(TimeSpan.FromMinutes(15));
+            var now = DateTime.Now.RoundToNearest(TimeSpan.FromSeconds(30));
             var key = now.ToString("HH:mm");
 
             if (log.ContainsKey(key))
