@@ -1,4 +1,4 @@
-﻿Bifrost.namespace("Chapter5.HumanResources.Employees", {
+﻿Bifrost.namespace("Web.HumanResources.Employees", {
     Register: Bifrost.views.ViewModel.extend(function (employeesHub) {
         var self = this;
 

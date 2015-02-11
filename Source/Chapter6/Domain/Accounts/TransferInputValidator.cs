@@ -1,6 +1,5 @@
-﻿using Bifrost.Validation;
+﻿using Bifrost.FluentValidation.Commands;
 using FluentValidation;
-using FluentValidation.Validators;
 
 namespace Web.Domain.Accounts
 {

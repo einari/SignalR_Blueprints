@@ -21,7 +21,6 @@
     <IISExpressUseClassicPipelineMode />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
-    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,40 +41,44 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Antlr3.Runtime">
-      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Bifrost">
-      <HintPath>..\packages\Bifrost.1.0.0.10\lib\net45\Bifrost.dll</HintPath>
+    <Reference Include="Bifrost, Version=1.0.0.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Bifrost.1.0.0.11\lib\net45\Bifrost.dll</HintPath>
     </Reference>
-    <Reference Include="Bifrost.JSON">
-      <HintPath>..\packages\Bifrost.JSON.1.0.0.10\lib\net45\Bifrost.JSON.dll</HintPath>
+    <Reference Include="Bifrost.JSON, Version=1.0.0.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Bifrost.JSON.1.0.0.11\lib\net45\Bifrost.JSON.dll</HintPath>
     </Reference>
     <Reference Include="Bifrost.Mimir.Domain">
-      <HintPath>..\packages\Bifrost.Mimir.1.0.0.10\lib\net45\Bifrost.Mimir.Domain.dll</HintPath>
+      <HintPath>..\packages\Bifrost.Mimir.1.0.0.11-rc1\lib\net45\Bifrost.Mimir.Domain.dll</HintPath>
     </Reference>
     <Reference Include="Bifrost.Mimir.Events">
-      <HintPath>..\packages\Bifrost.Mimir.1.0.0.10\lib\net45\Bifrost.Mimir.Events.dll</HintPath>
+      <HintPath>..\packages\Bifrost.Mimir.1.0.0.11-rc1\lib\net45\Bifrost.Mimir.Events.dll</HintPath>
     </Reference>
     <Reference Include="Bifrost.Mimir.Views">
-      <HintPath>..\packages\Bifrost.Mimir.1.0.0.10\lib\net45\Bifrost.Mimir.Views.dll</HintPath>
+      <HintPath>..\packages\Bifrost.Mimir.1.0.0.11-rc1\lib\net45\Bifrost.Mimir.Views.dll</HintPath>
     </Reference>
     <Reference Include="Bifrost.Mimir.Web">
-      <HintPath>..\packages\Bifrost.Mimir.1.0.0.10\lib\net45\Bifrost.Mimir.Web.dll</HintPath>
+      <HintPath>..\packages\Bifrost.Mimir.1.0.0.11-rc1\lib\net45\Bifrost.Mimir.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Bifrost.Ninject">
-      <HintPath>..\packages\Bifrost.Ninject.1.0.0.10\lib\net45\Bifrost.Ninject.dll</HintPath>
+    <Reference Include="Bifrost.Ninject, Version=1.0.0.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Bifrost.Ninject.1.0.0.11\lib\net45\Bifrost.Ninject.dll</HintPath>
     </Reference>
-    <Reference Include="Bifrost.Web">
-      <HintPath>..\packages\Bifrost.Web.1.0.0.10\lib\net45\Bifrost.Web.dll</HintPath>
+    <Reference Include="Bifrost.Web, Version=1.0.0.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Bifrost.Web.1.0.0.11\lib\net45\Bifrost.Web.dll</HintPath>
     </Reference>
     <Reference Include="FluentValidation">
       <HintPath>..\packages\FluentValidation.3.4.6.0\lib\Net40\FluentValidation.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.Core">
-      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.1.2\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.0\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.SystemWeb">
-      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.1.2\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.0\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Owin">
@@ -91,11 +94,12 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Ninject">
-      <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
     </Reference>
     <Reference Include="Ninject.Web.Common">
       <HintPath>..\packages\Ninject.Web.Common.3.2.3.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
@@ -123,14 +127,21 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="WebActivatorEx">
-      <HintPath>..\packages\WebActivatorEx.2.0.5\lib\net40\WebActivatorEx.dll</HintPath>
+      <HintPath>..\packages\WebActivatorEx.2.0.6\lib\net40\WebActivatorEx.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
-      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="LessMsbuildTasks.txt" />
     <Content Include="packages.config" />
+    <None Include="Scripts\jquery-2.1.3.intellisense.js" />
+    <Content Include="Scripts\Bifrost.js" />
+    <Content Include="Scripts\domReady.js" />
+    <Content Include="Scripts\jquery-2.1.3.js" />
+    <Content Include="Scripts\jquery-2.1.3.min.js" />
+    <Content Include="Scripts\jquery-2.1.3.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -153,27 +164,21 @@
     <Content Include="HumanResources\Employees\Register.js" />
     <Content Include="index.html" />
     <Content Include="readme.txt" />
-    <Content Include="Scripts\Bifrost.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\domReady.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <None Include="Scripts\jquery-1.9.0.intellisense.js" />
-    <Content Include="Scripts\jquery-1.9.0.js" />
-    <Content Include="Scripts\jquery-1.9.0.min.js" />
-    <Content Include="Scripts\jquery-1.9.0.min.map" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
     <Content Include="Scripts\jquery.history.js" />
-    <Content Include="Scripts\jquery.signalR-2.0.1.js" />
-    <Content Include="Scripts\jquery.signalR-2.0.1.min.js" />
-    <Content Include="Scripts\knockout-3.1.0.debug.js" />
-    <Content Include="Scripts\knockout-3.1.0.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.0.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.0.min.js" />
+    <Content Include="Scripts\knockout-3.2.0.debug.js" />
+    <Content Include="Scripts\knockout-3.2.0.js" />
     <Content Include="Scripts\knockout.mapping-latest.debug.js" />
     <Content Include="Scripts\knockout.mapping-latest.js" />
     <Content Include="Scripts\order.js" />
@@ -224,6 +229,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
+  <Import Project="..\packages\LessMsbuildTasks.1.0.7\tools\LessCompiler.targets" Condition="Exists('..\packages\LessMsbuildTasks.1.0.7\tools\LessCompiler.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

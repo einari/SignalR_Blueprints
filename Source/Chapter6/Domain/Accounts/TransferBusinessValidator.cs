@@ -1,4 +1,4 @@
-﻿using Bifrost.Validation;
+﻿using Bifrost.FluentValidation.Commands;
 using FluentValidation;
 using Web.ValidationQueries;
 
