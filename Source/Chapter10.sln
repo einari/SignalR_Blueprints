@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter10", "Chapter10\Chapter10.csproj", "{AF0F36E2-2181-4072-9974-47A66A303282}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter10", "Chapter10\Chapter10\Chapter10.csproj", "{AF0F36E2-2181-4072-9974-47A66A303282}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter10.Client", "Chapter10.Client\Chapter10.Client.csproj", "{795C4BD6-1D0C-447B-8522-3720D39B7772}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter10.Client", "Chapter10\Chapter10.Client\Chapter10.Client.csproj", "{795C4BD6-1D0C-447B-8522-3720D39B7772}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
