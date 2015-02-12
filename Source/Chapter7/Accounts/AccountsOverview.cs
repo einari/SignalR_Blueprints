@@ -18,7 +18,7 @@ namespace Chapter7.Accounts
             _dispatcher = dispatcher;
             _accountBalanceChangedCallbacks = new List<AccountBalanceChanged>();
 
-            var hubConnection = new HubConnection("http://localhost:9044/");
+            var hubConnection = new HubConnection("http://10.0.1.37:9044/");
 
             _proxy = hubConnection.CreateHubProxy("OverviewHub");
             _proxy.On("accountBalanceChanged", (string accountNumber, decimal amount) =>
