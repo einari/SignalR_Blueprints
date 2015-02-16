@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Bifrost.Entities;
 using Microsoft.AspNet.SignalR;
 
-namespace Web.HumanResources.Employees
+namespace Chapter5.HumanResources.Employees
 {
     public class EmployeesHub : Hub
     {

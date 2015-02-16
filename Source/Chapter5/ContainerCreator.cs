@@ -3,7 +3,7 @@ using Bifrost.Execution;
 using Bifrost.Ninject;
 using Ninject;
 
-namespace Web
+namespace Chapter5
 {
     public class ContainerCreator : ICanCreateContainer
     {

@@ -1,4 +1,4 @@
-﻿Bifrost.namespace("Web.HumanResources.Employees", {
+﻿Bifrost.namespace("Chapter5.HumanResources.Employees", {
     List: Bifrost.views.ViewModel.extend(function (employeesHub) {
         var self = this;
         this.employees = ko.observableArray();

@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using Bifrost.Configuration;
 
-namespace Web
+namespace Chapter5
 {
     public class BifrostConfigurator : ICanConfigure
     {

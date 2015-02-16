@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Web.HumanResources.Employees
+namespace Chapter5.HumanResources.Employees
 {
     public class Employee
     {
